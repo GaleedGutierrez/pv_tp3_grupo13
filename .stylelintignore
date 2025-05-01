@@ -1,0 +1,15 @@
+**/*_normalize.css
+**/*_normalize.scss
+**/font/*
+**/fonts/**
+**/googleAnalytics.js
+**/__snapshots__/**
+**/node_modules/**
+**/dist/**
+**/build/**
+**/coverage/**
+**/playwright-report/**
+**/test-results/**
+**/lighthouse-report/**
+**/.astro/**
+**/public/**/tailwind.css

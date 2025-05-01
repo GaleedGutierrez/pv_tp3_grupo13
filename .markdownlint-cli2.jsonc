@@ -1,0 +1,49 @@
+{
+	"ignores": ["./.github/CODEOWNERS"],
+	"config": {
+		"MD046": {
+			"style": "fenced"
+		},
+		"MD048": {
+			"style": "backtick"
+		},
+		"MD003": {
+			"style": "atx"
+		},
+		"MD035": {
+			"style": "---"
+		},
+		"MD013": {
+			"headings": false,
+			"strict": true,
+			"code_blocks": false
+		},
+		"MD037": true,
+		"MD024": {
+			"siblings_only": true
+		},
+		"MD029": {
+			"style": "ordered"
+		},
+		"MD044": {
+			"code_blocks": false,
+			"names": [
+				"Cake.Markdownlint",
+				"CommonMark",
+				"JavaScript",
+				"Markdown",
+				"markdown-it",
+				"markdownlint",
+				"Node.js",
+				"TypeScript"
+			]
+		},
+		"MD045": true,
+		"MD049": {
+			"style": "underscore"
+		},
+		"MD004": {
+			"style": "dash"
+		}
+	}
+}
