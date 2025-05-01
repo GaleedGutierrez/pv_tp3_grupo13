@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"/*": ["./public/*"],
+			"@public/*": ["./public/*"],
+			"@app/*": ["./app/*"],
+			"@tests/*": ["./tests/*"],
+			"@e2e/*": ["./e2e/*"],
+			"@/*": ["./src/*"],
+			"@application/*": ["./src/application/*"],
+			"@assets/*": ["./src/assets/*"],
+			"@components/*": ["./src/components/*"],
+			"@context/*": ["./src/context/*"],
+			"@data/*": ["./src/data/*"],
+			"@domain/*": ["./src/domain/*"],
+			"@guard/*": ["./src/guard/*"],
+			"@hooks/*": ["./src/hooks/*"],
+			"@icons/*": ["./src/assets/icons/*"],
+			"@images/*": ["./src/assets/images/*"],
+			"@infrastructure/*": ["./src/infrastructure/*"],
+			"@models/*": ["./src/models/*"],
+			"@pages/*": ["./src/pages/*"],
+			"@private/*": ["./src/private/*"],
+			"@routes/*": ["./src/routes/*"],
+			"@services/*": ["./src/services/*"],
+			"@state/*": ["./src/state/*"],
+			"@styles/*": ["./src/styles/*"],
+			"@templates/*": ["./src/templates/*"],
+			"@utils/*": ["./src/utils/*"],
+			"@views/*": ["./src/views/*"]
+		}
+	},
+	"exclude": ["node_modules", "dist", "build"]
+}

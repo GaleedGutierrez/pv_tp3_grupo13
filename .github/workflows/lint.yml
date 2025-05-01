@@ -1,0 +1,81 @@
+---
+name: 💅 Lint
+on: # yamllint disable-line rule:truthy
+  push: null
+  pull_request: null
+
+permissions:
+  contents: read
+  packages: read
+  statuses: write
+
+jobs:
+  lint:
+    name: 🎀 ESLint - StyleLint - Prettier - HTMLHint - MarkdownLint - JCPD
+    runs-on: ubuntu-latest
+    steps:
+      - name: 👍 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📥 Install Dependencies
+        run: npm ci
+
+      - name: 🌹 ESLint
+        run: npm run lint
+
+      - name: 👔 StyleLint
+        run: npm run stylelint
+
+      - name: 📄 Markdown
+        run: npm run lint-md
+
+      - name: 📐 Prettier
+        run: npm run prettier
+
+      - name: 👯‍♂️ JavaScript Copy/Paste Detector
+        run: npm run check-for-dupes
+
+  build:
+    name: 💐 Super Linter
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: read
+      # To report GitHub Actions status checks
+      statuses: write
+
+    steps:
+      - name: 👍 Checkout code
+        uses: actions/checkout@v4
+        with:
+          # super-linter needs the full git history to get the
+          # list of files that changed across commits
+          fetch-depth: 0
+
+      - name: 📥 Install Dependencies
+        run: npm ci
+
+      - name: 💐 Super-linter
+        uses: super-linter/super-linter@v7.3.0 # x-release-please-version
+        env:
+          # To report GitHub Actions status checks
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_EDITORCONFIG: false
+          VALIDATE_CSS: false
+          VALIDATE_CSS_PRETTIER: false
+          VALIDATE_HTML: false
+          VALIDATE_HTML_PRETTIER: false
+          VALIDATE_TSX: false
+          VALIDATE_TYPESCRIPT_ES: false
+          VALIDATE_TYPESCRIPT_PRETTIER: false
+          VALIDATE_TYPESCRIPT_STANDARD: false
+          VALIDATE_JAVASCRIPT_ES: false
+          VALIDATE_JAVASCRIPT_PRETTIER: false
+          VALIDATE_JAVASCRIPT_STANDARD: false
+          VALIDATE_JSON: false
+          VALIDATE_JSON_PRETTIER: false
+          VALIDATE_JSONC: false
+          VALIDATE_JSONC_PRETTIER: false
+          VALIDATE_JSCPD: false
+          VALIDATE_MARKDOWN_PRETTIER: false

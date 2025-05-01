@@ -1,0 +1,77 @@
+{
+	"name": "trabajo-practico-n3",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "eslint -c eslint.config.js . --max-warnings 0",
+		"lint:fix": "eslint --fix ./**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,json}",
+		"prettier": "prettier . --check",
+		"prettier:fix": "prettier . --write",
+		"stylelint": "stylelint ./**/*.{css,scss} --allow-empty-input",
+		"stylelint:fix": "stylelint --fix ./**/*.{css,scss} --allow-empty-input",
+		"lint-md": "markdownlint-cli2 --config \".markdownlint-cli2.jsonc\" **/*.md \"#node_modules\"",
+		"lint-md:fix": "markdownlint-cli2 --config \".markdownlint-cli2.jsonc\" --fix **/*.md \"#node_modules\"",
+		"check-for-dupes": "jscpd ./",
+		"prepare": "husky || true"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.8.0",
+		"@commitlint/config-conventional": "^19.8.0",
+		"@stylistic/eslint-plugin": "^4.2.0",
+		"@vitest/eslint-plugin": "^1.1.43",
+		"eslint": "^9.25.1",
+		"eslint-config-prettier": "^10.1.2",
+		"eslint-plugin-check-file": "^3.2.0",
+		"eslint-plugin-import-x": "^4.11.0",
+		"eslint-plugin-jsdoc": "^50.6.11",
+		"eslint-plugin-jsonc": "^2.20.0",
+		"eslint-plugin-jsx-a11y": "^6.10.2",
+		"eslint-plugin-playwright": "^2.2.0",
+		"eslint-plugin-prettier": "^5.2.6",
+		"eslint-plugin-react": "^7.37.5",
+		"eslint-plugin-react-hooks": "^5.2.0",
+		"eslint-plugin-react-refresh": "^0.4.20",
+		"eslint-plugin-security": "^3.0.1",
+		"eslint-plugin-simple-import-sort": "^12.1.1",
+		"eslint-plugin-sort-class-members": "^1.21.0",
+		"eslint-plugin-tsdoc": "^0.4.0",
+		"eslint-plugin-unicorn": "^58.0.0",
+		"eslint-plugin-unused-imports": "^4.1.4",
+		"husky": "^9.1.7",
+		"jscpd": "^4.0.5",
+		"markdownlint-cli2": "^0.17.2",
+		"prettier": "^3.5.3",
+		"stylelint": "^16.18.0",
+		"stylelint-config-standard": "^38.0.0",
+		"stylelint-order": "^6.0.4",
+		"stylelint-prettier": "^5.0.3",
+		"vite": "^6.3.1"
+	},
+	"lint-staged": {
+		"*.(j|t)s": "npm run lint:fix",
+		"*{css,s(a|c)ss}": "npm run stylelint:fix"
+	},
+	"jscpd": {
+		"threshold": 3.5,
+		"reporters": [
+			"consoleFull"
+		],
+		"ignore": [
+			"**/node_modules/**",
+			"**/dist/**",
+			"**/dist-dev/**",
+			"**/build/**",
+			"**/fonts/**",
+			"**/coverage/**",
+			"**/playwright-reports/**",
+			"**/test-results/**",
+			"**/lighthouse-report/**",
+			"**/tsconfig.*.json"
+		],
+		"absolute": true
+	}
+}

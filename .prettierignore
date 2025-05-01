@@ -1,0 +1,12 @@
+.stylelintrc.json
+/dist/*
+/build/*
+/node_modules/*
+/.astro/*
+/**/*.bundle.js
+/**/index.bundle.*.js
+/**/googleAnalytics.js
+/test-results/*
+/playwright-report/*
+**/fonts/*
+**/font/*
