@@ -1,6 +1,5 @@
 :root {
 	background-color: #242424;
-	/* stylelint-disable-next-line function-disallowed-list */
 	color: rgb(255 255 255 / 87%);
 	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 	font-weight: normal;
@@ -33,36 +32,6 @@ body {
 h1 {
 	font-size: 3.2em;
 	line-height: 1.1;
-}
-
-#app {
-	max-width: 1280px;
-	padding: 2rem;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.logo {
-	height: 6em;
-	padding: 1.5em;
-	transition: filter 300ms;
-	will-change: filter;
-}
-
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vanilla:hover {
-	filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-	padding: 2em;
-}
-
-.read-the-docs {
-	color: #888;
 }
 
 button {
