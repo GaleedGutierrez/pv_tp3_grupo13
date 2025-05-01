@@ -50,5 +50,28 @@
 		"stylelint-order": "^6.0.4",
 		"stylelint-prettier": "^5.0.3",
 		"vite": "^6.3.1"
+	},
+	"lint-staged": {
+		"*.(j|t)s": "npm run lint:fix",
+		"*{css,s(a|c)ss}": "npm run stylelint:fix"
+	},
+	"jscpd": {
+		"threshold": 3.5,
+		"reporters": [
+			"consoleFull"
+		],
+		"ignore": [
+			"**/node_modules/**",
+			"**/dist/**",
+			"**/dist-dev/**",
+			"**/build/**",
+			"**/fonts/**",
+			"**/coverage/**",
+			"**/playwright-reports/**",
+			"**/test-results/**",
+			"**/lighthouse-report/**",
+			"**/tsconfig.*.json"
+		],
+		"absolute": true
 	}
 }
