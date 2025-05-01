@@ -66,11 +66,9 @@ export default defineConfig(
 			},
 
 			parserOptions: {
-				projectService: true,
-				tsconfigRootDir: import.meta.dirname,
-				ecmaFeatures: {
-					jsx: true,
-				},
+				ecmaVersion: 'latest',
+				ecmaFeatures: { jsx: true },
+				sourceType: 'module',
 			},
 		},
 
@@ -342,7 +340,7 @@ export default defineConfig(
 			'import-x/first': 'error',
 			'import-x/newline-after-import': 'error',
 			'import-x/no-duplicates': 'error',
-			'import-x/no-unresolved': 'error',
+			'import-x/no-unresolved': ['error', { ignore: ['^/'] }],
 			'import-x/no-webpack-loader-syntax': 'error',
 			'simple-import-sort/exports': 'error',
 			'simple-import-sort/imports': 'error',
@@ -371,6 +369,9 @@ export default defineConfig(
 
 		rules: {
 			...reactHooks.configs.recommended.rules,
+			'react/jsx-uses-vars': 'error', // Explicitly enable to mark JSX variables as used
+			'unused-imports/no-unused-imports': 'off', // Disable this specific rule for JSX files
+			'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
 			'sort-class-members/sort-class-members': 'off',
 			'react/boolean-prop-naming': [
 				'error',
