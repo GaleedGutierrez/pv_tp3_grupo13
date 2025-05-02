@@ -1,8 +1,7 @@
-import { TaskInput } from '@components/TaskInput';
-import { TaskList } from '@components/TaskList';
-import { useState } from 'react';
+// import { TaskInput } from '@components/TaskInput';
+// import { TaskList } from '@components/TaskList';
 // Ensure the file exists or update the path if necessary
-/** @import { Task } from './models/Task.model.js' */
+// /** @import { Task } from './models/Task.model.js' */
 
 /**
  * @description Main App component
@@ -10,16 +9,16 @@ import { useState } from 'react';
  * @example <App />
  */
 function App() {
-	const [tasks, setTasks] = useState(/** @type {Task[]} */ ([]));
+	// const [tasks, setTasks] = useState(/** @type {Task[]} */ ([]));
 
 	return (
 		<>
 			<h1>Lista de tareas</h1>
-			<TaskInput setTasks={setTasks} />
+			{/* <TaskInput setTasks={setTasks} />
 			<TaskList
 				setTasks={setTasks}
 				tasks={tasks}
-			/>
+			/> */}
 		</>
 	);
 }
