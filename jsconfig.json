@@ -50,7 +50,6 @@
 			"@state/*": ["./src/state/*"],
 			"@styles/*": ["./src/styles/*"],
 			"@templates/*": ["./src/templates/*"],
-			"@types/*": ["src/models/*"],
 			"@utils/*": ["./src/utils/*"],
 			"@views/*": ["./src/views/*"]
 		}
