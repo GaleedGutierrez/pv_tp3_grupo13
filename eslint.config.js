@@ -369,8 +369,7 @@ export default defineConfig(
 
 		rules: {
 			...reactHooks.configs.recommended.rules,
-			'react/jsx-uses-vars': 'error', // Explicitly enable to mark JSX variables as used
-			'unused-imports/no-unused-imports': 'off', // Disable this specific rule for JSX files
+			'react/jsx-uses-vars': 'error',
 			'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
 			'sort-class-members/sort-class-members': 'off',
 			'react/boolean-prop-naming': [
