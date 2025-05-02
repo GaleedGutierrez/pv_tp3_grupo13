@@ -1,13 +1,26 @@
-import { TaskInput } from './components/TaskInput/index.jsx';
-import GlobalProvider from './context/global.provider.jsx';
+import { TaskInput } from '@components/TaskInput';
+import { TaskList } from '@components/TaskList';
+import { useState } from 'react';
+// Ensure the file exists or update the path if necessary
+/** @import { Task } from './models/Task.model.js' */
 
+/**
+ * @description Main App component
+ * @returns {import('react').JSX.Element}
+ * @example <App />
+ */
 function App() {
+	const [tasks, setTasks] = useState(/** @type {Task[]} */ ([]));
+
 	return (
-		<GlobalProvider>
+		<>
 			<h1>Lista de tareas</h1>
-			<TaskInput />
-			{/* <TaskList /> */}
-		</GlobalProvider>
+			<TaskInput setTasks={setTasks} />
+			<TaskList
+				setTasks={setTasks}
+				tasks={tasks}
+			/>
+		</>
 	);
 }
 
