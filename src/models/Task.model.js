@@ -1,9 +1,9 @@
 /**
  * @typedef {object} Task
- * @property {string} text - El texto de la tarea.
- * @property {boolean} completed - Indica si la tarea está completada.
- * @property {number} id - El identificador único de la tarea.
+ * @property {string} text - Text of the task.
+ * @property {boolean} completed - Indicates if the task is completed.
+ * @property {number} id - Unique identifier of the task.
  */
 
-// Export vacío para asegurar que el archivo sea tratado como un módulo
+// Empty export to ensure this file is treated as a module
 export {};
