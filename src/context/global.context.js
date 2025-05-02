@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react';
 
-/** @import { Task } from '../types/Task.js' */
+/** @import { Task } from '@models/Task.model' */
 /**
  * @typedef {object} GlobalContextType
  * @property {Task[]} tasks // Changed Task to Task[]
@@ -9,8 +9,9 @@ import { createContext, useContext } from 'react';
 
 /** @type {React.Context<GlobalContextType>} */
 export const GlobalContext = createContext({
-	tasks: [],
-	setTasks: () => {},
+	tasks: /** @type {Task[]} */ ([]),
+	setTasks:
+		/** @type {React.Dispatch<React.SetStateAction<Task[]>>} */ () => {},
 });
 
 /**
