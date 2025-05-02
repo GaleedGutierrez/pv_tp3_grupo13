@@ -1,41 +1,46 @@
 import { useState } from 'react';
 
-import { useGlobalContext } from '../../context/global.context.js';
-
 /**
- * @returns {JSX.Element}
- * @description TaskInput component
- * @example <TaskInput />
+ * @description This component is used to add a new task to the list.
+ * @param {object} props - The component props.
+ * @param {React.Dispatch<React.SetStateAction<import('@models/Task.model').Task[]>>} props.setTasks - The function to set the tasks.
+ * @returns {import('react').JSX.Element}
+ * @example <TaskInput setTasks={setTasks}/>
  */
-export const TaskInput = () => {
-	const { setTasks } = useGlobalContext();
-	/** @type {[string, React.Dispatch<React.SetStateAction<string>>]} */
-	const [inputNewTask, setInputNewTask] = useState('');
+export const TaskInput = ({ setTasks }) => {
+	const [inputNewTask, setInputNewTask] = useState(
+		/** @type {string} */ (''),
+	);
 
 	/**
 	 * @param {React.ChangeEvent<HTMLInputElement>} event
 	 */
 	const handleChange = (event) => {
-		setInputNewTask(event.target.value);
+		const { value } = event.target;
+
+		setInputNewTask(value);
 	};
 
 	/**
-	 * @param {React.FormEvent<HTMLFormElement>} event
+	 * @param {React.MouseEvent<HTMLButtonElement>} event
 	 */
 	const handleSubmit = (event) => {
 		event.preventDefault();
 
-		if (inputNewTask.trim() === '') {
+		const INPUT_TEXT = inputNewTask.trim();
+
+		if (INPUT_TEXT === '') {
 			return;
 		}
 
-		const newTask = {
-			text: inputNewTask,
+		const NEW_TASK = {
+			text: INPUT_TEXT,
 			completed: false,
 			id: Date.now(),
 		};
 
-		setTasks((previousTasks) => [...previousTasks, newTask]);
+		setTasks((previousTasks) => [...previousTasks, NEW_TASK]);
+		setInputNewTask('');
 	};
 
 	return (
