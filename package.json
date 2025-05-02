@@ -3,6 +3,37 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GaleedGutierrez/pv_tp3_grupo13.git"
+	},
+	"keywords": [
+		"React"
+	],
+	"author": "Galeed Gutierrez <galeedeveloper@gmail.com> (https://galeedgutierrez.com/)",
+	"contributors": [
+		{
+			"name": "Alfredo Ezequiel Gonzalez Lopez",
+			"url": "https://github.com/Ezequiel12354s"
+		},
+		{
+			"name": "Enzo Isaías Condori",
+			"url": "https://github.com/isaiahOZ"
+		},
+		{
+			"name": "Tomas Leandro Tastaca Gutierrez",
+			"url": "https://github.com/TomasTastaca"
+		},
+		{
+			"name": "Franklin Fernando Alexander Vazquez",
+			"url": "https://github.com/VasquezFranklin"
+		}
+	],
+	"bugs": {
+		"url": "https://github.com/GaleedGutierrez/pv_tp3_grupo13/issues"
+	},
+	"homepage": "https://github.com/GaleedGutierrez/pv_tp3_grupo13#readme",
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
