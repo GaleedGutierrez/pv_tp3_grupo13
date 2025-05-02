@@ -2,7 +2,7 @@
 release:
   - base-branch: "main"
 
-documentation:
+Documentation:
   - head-branch:
       ["^documentation", "documentation:", "documentation:*", "^docs", "docs:"]
   - changed-files:

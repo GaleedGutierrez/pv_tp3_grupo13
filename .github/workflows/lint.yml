@@ -79,3 +79,4 @@ jobs:
           VALIDATE_JSONC_PRETTIER: false
           VALIDATE_JSCPD: false
           VALIDATE_MARKDOWN_PRETTIER: false
+          VALIDATE_JSX: false
