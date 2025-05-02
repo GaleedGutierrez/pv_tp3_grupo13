@@ -1,50 +1,24 @@
-import './App.css';
+// import { TaskInput } from '@components/TaskInput';
+// import { TaskList } from '@components/TaskList';
+// Ensure the file exists or update the path if necessary
+// /** @import { Task } from './models/Task.model.js' */
 
-import { useState } from 'react';
-
-import viteLogo from '/vite.svg';
-
-import reactLogo from './assets/react.svg';
-
+/**
+ * @description Main App component
+ * @returns {import('react').JSX.Element}
+ * @example <App />
+ */
 function App() {
-	const [count, setCount] = useState(0);
+	// const [tasks, setTasks] = useState(/** @type {Task[]} */ ([]));
 
 	return (
 		<>
-			<div>
-				<a
-					href="https://vite.dev"
-					target="_blank"
-				>
-					<img
-						alt="Vite logo"
-						className="logo"
-						src={viteLogo}
-					/>
-				</a>
-				<a
-					href="https://react.dev"
-					target="_blank"
-				>
-					<img
-						alt="React logo"
-						className="logo react"
-						src={reactLogo}
-					/>
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.jsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
+			<h1>Lista de tareas</h1>
+			{/* <TaskInput setTasks={setTasks} />
+			<TaskList
+				setTasks={setTasks}
+				tasks={tasks}
+			/> */}
 		</>
 	);
 }

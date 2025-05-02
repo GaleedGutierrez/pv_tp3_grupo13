@@ -1,9 +1,8 @@
-/* eslint-disable import-x/no-named-as-default-member */
-/* eslint-disable import-x/no-unresolved */
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import vitest from '@vitest/eslint-plugin';
 import { defineConfig } from 'eslint/config';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 import checkFile from 'eslint-plugin-check-file';
 import eslintPluginImportX from 'eslint-plugin-import-x';
 import jsdoc from 'eslint-plugin-jsdoc';
@@ -77,6 +76,11 @@ export default defineConfig(
 				pragma: 'React',
 				version: 'detect',
 			},
+			'import-x/resolver-next': [
+				createTypeScriptImportResolver({
+					project: './{ts,js}config.json',
+				}),
+			],
 		},
 
 		rules: {
@@ -369,8 +373,7 @@ export default defineConfig(
 
 		rules: {
 			...reactHooks.configs.recommended.rules,
-			'react/jsx-uses-vars': 'error', // Explicitly enable to mark JSX variables as used
-			'unused-imports/no-unused-imports': 'off', // Disable this specific rule for JSX files
+			'react/jsx-uses-vars': 'error',
 			'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
 			'sort-class-members/sort-class-members': 'off',
 			'react/boolean-prop-naming': [

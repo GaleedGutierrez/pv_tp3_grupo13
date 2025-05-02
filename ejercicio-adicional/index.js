@@ -35,7 +35,7 @@ function ordenarProductos() {
 
 console.info(
 	'Array de productos ordenados de menor a mayor',
-	ordenarProductos(productos),
+	ordenarProductos(),
 );
 
 // Punto 5
@@ -48,10 +48,7 @@ function agregarProducto() {
 	return productos;
 }
 
-console.info(
-	'Array de productos con el nuevo producto',
-	agregarProducto(productos),
-);
+console.info('Array de productos con el nuevo producto', agregarProducto());
 
 // Punto 6
 function eliminarMasBarato() {
@@ -75,5 +72,5 @@ function eliminarMasBarato() {
 
 console.info(
 	'Lista de precios sin el producto más barato',
-	eliminarMasBarato(productos),
+	eliminarMasBarato(),
 );

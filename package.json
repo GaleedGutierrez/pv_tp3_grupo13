@@ -3,6 +3,37 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GaleedGutierrez/pv_tp3_grupo13.git"
+	},
+	"keywords": [
+		"React"
+	],
+	"author": "Galeed Gutierrez <galeedeveloper@gmail.com> (https://galeedgutierrez.com/)",
+	"contributors": [
+		{
+			"name": "Alfredo Ezequiel Gonzalez Lopez",
+			"url": "https://github.com/Ezequiel12354s"
+		},
+		{
+			"name": "Enzo Isaías Condori",
+			"url": "https://github.com/isaiahOZ"
+		},
+		{
+			"name": "Tomas Leandro Tastaca Gutierrez",
+			"url": "https://github.com/TomasTastaca"
+		},
+		{
+			"name": "Franklin Fernando Alexander Vazquez",
+			"url": "https://github.com/VasquezFranklin"
+		}
+	],
+	"bugs": {
+		"url": "https://github.com/GaleedGutierrez/pv_tp3_grupo13/issues"
+	},
+	"homepage": "https://github.com/GaleedGutierrez/pv_tp3_grupo13#readme",
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
@@ -33,6 +64,7 @@
 		"@vitest/eslint-plugin": "^1.1.43",
 		"eslint": "^9.25.1",
 		"eslint-config-prettier": "^10.1.2",
+		"eslint-import-resolver-typescript": "^4.3.4",
 		"eslint-import-resolver-vite": "^2.1.0",
 		"eslint-plugin-check-file": "^3.2.0",
 		"eslint-plugin-import-x": "^4.11.0",
@@ -60,10 +92,10 @@
 		"stylelint-order": "^6.0.4",
 		"stylelint-prettier": "^5.0.3",
 		"vite": "^6.3.1",
-		"vite-tsconfig-paths": "^5.1.4"
+		"vite-jsconfig-paths": "^2.0.1"
 	},
 	"lint-staged": {
-		"*.(j|t)s": "npm run lint:fix",
+		"*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,json}": "eslint --fix",
 		"*{css,s(a|c)ss}": "npm run stylelint:fix"
 	},
 	"jscpd": {
