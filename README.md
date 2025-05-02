@@ -1,7 +1,8 @@
 # Trabajo práctico N°3
 
-Este proyecto es una aplicación de Lista de Tareas desarrollada con React y
-Vite. Su objetivo principal es permitir a los usuarios gestionar tareas.
+Este proyecto consiste en una aplicación web de Lista de Tareas (To-Do List)
+construida utilizando React y Vite. El propósito fundamental de la aplicación
+es ofrecer a los usuarios una interfaz para gestionar sus tareas pendientes.
 
 ## Funcionalidades clave
 
@@ -13,15 +14,27 @@ finalizada.
 **Eliminar Tareas:** Un botón "Eliminar" junto a cada tarea permite quitarla de
 la lista.
 
-## Estructura y Tecnología
+## Arquitectura y Tecnologías Utilizadas
 
-Se utiliza React con Vite para la creación del proyecto.
-La interfaz se construye con JSX.
-Se definen componentes reutilizables como **TaskInput** (para añadir tareas),
-**TaskItem** (para mostrar una tarea individual) y **TaskList**
-(para mostrar la lista completa).
-El estado de la aplicación (la lista de tareas y el valor del input) se maneja
-con el hook useState.
+El desarrollo se basa en tecnologías web modernas:
+
+- **Framework/Librería:** React se utiliza como la librería principal para
+  construir la interfaz de usuario.
+- **Entorno de Desarrollo:** Vite proporciona un entorno de desarrollo rápido y
+  optimizado.
+- **Lenguaje de Plantillas:** JSX se emplea para definir la estructura de los
+  componentes de React de manera declarativa.
+- **Gestión de Estado:** El hook `useState` de React se utiliza para manejar el
+  estado local de la aplicación, como la lista de tareas actual y el valor del
+  campo de entrada.
+- **Componentes Reutilizables:** La aplicación está estructurada en componentes
+  modulares y reutilizables para una mejor organización y mantenibilidad:
+- `TaskInput`: Componente responsable del formulario para añadir nuevas
+  tareas.
+- `TaskItem`: Componente que representa una única tarea en la lista,
+  incluyendo sus controles (marcar como completada, eliminar).
+  `TaskList`: Componente encargado de renderizar la lista completa de
+  `TaskItem`.
 
 ## Resumen
 
