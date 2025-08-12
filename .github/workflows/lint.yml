@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 👍 Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: 📥 Install Dependencies
         run: npm ci
@@ -47,7 +47,7 @@ jobs:
 
     steps:
       - name: 👍 Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           # super-linter needs the full git history to get the
           # list of files that changed across commits
